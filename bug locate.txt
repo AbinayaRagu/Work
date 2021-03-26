@@ -1,0 +1,24 @@
+
+#include <iostream>
+
+using namespace std;
+
+int addTwoNumbers(int *num1, int *num2) {
+	int result = 0;
+	result = *num1 + *num2;
+return result;
+}
+
+
+int main() {
+	int A = 2, B = 3;	
+	//This should print “A(2) + B(3) = C(5)”
+	printf("A(%d) + B(%d) = C(%d)\n", &A, &B, addTwoNumbers(&A, &B));
+	}
+
+
+C++/C follows bottom to top approach so we have to move the method addTwoNumbers() above main() method.
+Funtion addTwoNumbers() takes pointer as a input so have to pass the address instead of value.
+
+
+
